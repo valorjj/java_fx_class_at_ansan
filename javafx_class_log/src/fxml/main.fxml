@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainpage_borderpane" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="800.0" prefWidth="1200.0"
+	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MainpageController">
+	<left>
+		<AnchorPane fx:id="lp" prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fitHeight="150.0" fitWidth="150.0"
+					layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@apple.png" />
+					</image>
+				</ImageView>
+				<Button fx:id="btn_home" layoutX="2.0" layoutY="228.0"
+					mnemonicParsing="false" onAction="#home" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+					text="Menu" textFill="#4a4444e8">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@computer.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btn_community" layoutX="2.0" layoutY="378.0"
+					mnemonicParsing="false" onAction="#community" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: fira sans;"
+					text="Community" textFill="#4a4444">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@notification.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btn_product" layoutX="2.0" layoutY="304.0"
+					mnemonicParsing="false" onAction="#product" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+					text="Product" textFill="#4a4444e8">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@zoom-in.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btn_chat" layoutX="1.0" layoutY="456.0"
+					mnemonicParsing="false" onAction="#chat" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+					text="Chatting" textFill="#4a4444">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@speech-bubble.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btn_logout" layoutX="2.0" layoutY="607.0"
+					mnemonicParsing="false" onAction="#logout" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+					text="Logout" textFill="#4a4444">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@settings.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btn_info" layoutX="1.0" layoutY="528.0"
+					mnemonicParsing="false" onAction="#info" prefHeight="45.0"
+					prefWidth="200.0"
+					style="-fx-background-color: ffffff; -fx-font-family: fira sans;"
+					text="Info" textFill="#4a4444">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="35.0" fitWidth="35.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@folder.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Label fx:id="lbl_login_id" layoutX="16.0" layoutY="179.0"
+					style="-fx-font-family: FIra Sans;" text="Login ID"
+					textFill="#bc8989">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+
+				</Label>
+				<Label layoutX="16.0" layoutY="150.0"
+					style="-fx-font-family: Fira Sans;" text="Welcome..."
+					textFill="#bc8989">
+					<font>
+						<Font name="Symbol" size="13.0" />
+					</font>
+				</Label>
+				<Label layoutX="40.0" layoutY="677.0"
+					style="-fx-font-family: fira sans;" text="TEL | 010-9187-2624">
+					<font>
+						<Font name="Symbol" size="14.0" />
+					</font>
+				</Label>
+				<Line endX="-99.0" endY="762.0" layoutX="303.0" layoutY="-41.0"
+					startX="-100.0" stroke="#000000a6" />
+			</children>
+		</AnchorPane>
+	</left>
+	<center>
+		<AnchorPane fx:id="cp" prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

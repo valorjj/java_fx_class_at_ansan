@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+	prefWidth="800.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.ProductRegisterController">
+	<children>
+		<Label layoutX="28.0" layoutY="31.0" prefHeight="14.0"
+			prefWidth="96.0" text="Product" textFill="#dd2a2a">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<Label layoutX="131.0" layoutY="35.0" text="list">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<Line endX="100.0" layoutX="121.0" layoutY="73.0" startX="-100.0" />
+		<TextField fx:id="txt_p_name" layoutX="219.0"
+			layoutY="111.0" prefHeight="43.0" prefWidth="372.0" />
+		<TextArea fx:id="txt_p_contents" layoutX="219.0"
+			layoutY="170.0" prefHeight="156.0" prefWidth="372.0" />
+		<Label layoutX="40.0" layoutY="126.0" text="제품명" />
+		<Label layoutX="40.0" layoutY="186.0" text="제품설명" />
+		<Label layoutX="40.0" layoutY="364.0" text="카테고리" />
+		<RadioButton fx:id="opt_1" layoutX="219.0" layoutY="360.0"
+			mnemonicParsing="false" text="아이폰13">
+			<toggleGroup>
+				<ToggleGroup fx:id="iphone" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="opt_2" layoutX="319.0" layoutY="360.0"
+			mnemonicParsing="false" text="아이폰12" toggleGroup="$iphone" />
+		<RadioButton fx:id="opt_3" layoutX="422.0" layoutY="360.0"
+			mnemonicParsing="false" text="아이폰11" toggleGroup="$iphone" />
+		<Label layoutX="40.0" layoutY="409.0" text="가격" />
+		<TextField fx:id="txt_p_price" layoutX="219.0"
+			layoutY="394.0" prefHeight="43.0" prefWidth="372.0" />
+		<Label layoutX="40.0" layoutY="461.0" text="이미지등록" />
+		<Button fx:id="btn_image_add" layoutX="222.0" layoutY="459.0"
+			mnemonicParsing="false" onAction="#image_add" prefHeight="33.0"
+			prefWidth="312.0" text="이미지 등록" />
+		<Label fx:id="lbl_img_path" layoutX="222.0" layoutY="502.0"
+			prefHeight="33.0" prefWidth="384.0" text="이미지 경로" />
+		<Button fx:id="btn_cancel" layoutX="602.0" layoutY="435.0"
+			mnemonicParsing="false" onAction="#cancel" prefHeight="43.0"
+			prefWidth="145.0" text="취소" />
+		<Button fx:id="btn_register" layoutX="602.0" layoutY="378.0"
+			mnemonicParsing="false" onAction="#register" prefHeight="43.0"
+			prefWidth="145.0" text="등록" />
+		<AnchorPane layoutX="602.0" layoutY="111.0"
+			prefHeight="212.0" prefWidth="170.0"
+			style="-fx-border-color: #000000;">
+			<children>
+				<ImageView fx:id="p_img" fitHeight="212.0"
+					fitWidth="186.0" layoutX="-4.0" pickOnBounds="true"
+					preserveRatio="true" />
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

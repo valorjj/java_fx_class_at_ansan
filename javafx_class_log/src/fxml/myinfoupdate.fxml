@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MyinfoController">
+	<children>
+		<Label layoutX="85.0" layoutY="200.0"
+			style="-fx-font-family: NanumBarunGothic;" text="ID"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="lbl_id" layoutX="202.0" layoutY="200.0"
+			style="-fx-font-family: NanumBarunGothic;" text="id"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label layoutX="85.0" layoutY="265.0"
+			style="-fx-font-family: NanumBarunGothic;" text="NAME"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="lbl_name" layoutX="202.0" layoutY="265.0"
+			style="-fx-font-family: NanumBarunGothic; -fx-background-color: ffffff;"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label layoutX="85.0" layoutY="330.0"
+			style="-fx-font-family: NanumBarunGothic;" text="EMAIL"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Button fx:id="btn_cancel" layoutX="65.0" layoutY="542.0"
+			mnemonicParsing="false" onAction="#cancel" prefHeight="50.0"
+			prefWidth="640.0"
+			style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+			text="CANCEL" textFill="#464646">
+			<effect>
+				<InnerShadow />
+			</effect>
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Button>
+		<Button fx:id="btn_update" layoutX="65.0" layoutY="457.0"
+			mnemonicParsing="false" onAction="#update" prefHeight="50.0"
+			prefWidth="640.0"
+			style="-fx-background-color: ffffff; -fx-font-family: Fira Sans;"
+			text="UPDATE" textFill="#464646">
+			<effect>
+				<InnerShadow />
+			</effect>
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Button>
+		<Label layoutX="71.0" layoutY="58.0"
+			style="-fx-font-family: fira sans;" text="My" textFill="#d78888">
+			<font>
+				<Font size="34.0" />
+			</font>
+		</Label>
+		<Label layoutX="71.0" layoutY="105.0" prefHeight="42.0"
+			prefWidth="263.0" style="-fx-font-family: fira sans;"
+			text="Information" textFill="#d78888">
+			<font>
+				<Font size="34.0" />
+			</font>
+		</Label>
+		<Line endX="164.0" layoutX="165.0" layoutY="169.0"
+			startX="-100.0" stroke="#655f5f" />
+		<Line endX="164.0" layoutX="165.0" layoutY="433.0"
+			startX="-100.0" stroke="#655f5f" />
+		<Label layoutX="85.0" layoutY="395.0"
+			style="-fx-font-family: NanumBarunGothic;" text="POINT"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="lbl_point" layoutX="202.0" layoutY="395.0"
+			style="-fx-font-family: NanumBarunGothic;" text="point"
+			textFill="#464646">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<Label layoutX="269.0" layoutY="105.0" prefHeight="42.0"
+			prefWidth="263.0" style="-fx-font-family: fira sans;" text="Update"
+			textFill="#d78888">
+			<font>
+				<Font size="34.0" />
+			</font>
+		</Label>
+		<TextArea fx:id="update_name" layoutX="165.0" layoutY="256.0"
+			prefHeight="42.0" prefWidth="209.0" />
+		<TextArea fx:id="update_email" layoutX="165.0"
+			layoutY="321.0" prefHeight="42.0" prefWidth="209.0" />
+	</children>
+</AnchorPane>
