@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0"
 	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="controller.InfoController">
+	fx:controller="controller.MyinfoController">
 	<children>
 		<Label layoutX="85.0" layoutY="200.0"
 			style="-fx-font-family: NanumBarunGothic;" text="ID"
@@ -140,8 +140,7 @@
 			style="-fx-font-family: fira sans; -fx-border-color: ffffff;">
 			<columns>
 				<TableColumn prefWidth="75.0" text="Table Num" />
-				<TableColumn fx:id="myproduct_list" prefWidth="146.0"
-					text="Title" />
+				<TableColumn prefWidth="146.0" text="Title" />
 				<TableColumn prefWidth="108.0" text="Date" />
 				<TableColumn prefWidth="83.0" text="View" />
 			</columns>

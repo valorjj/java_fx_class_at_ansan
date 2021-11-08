@@ -26,7 +26,7 @@ public class MainpageController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		lbl_login_id.setText(LoginController.getInstance().getid());
-		loadpage("main_home"); // mainpage 실행 시 가운데 home.fxml 배치
+		loadpage("graph"); // mainpage 실행 시 가운데 home.fxml 배치
 	}
 
 	@FXML

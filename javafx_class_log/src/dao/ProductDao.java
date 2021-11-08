@@ -5,8 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import domain.Product;
+import domain.ProductDate;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -131,7 +134,7 @@ public class ProductDao {
 		String sql = "select * from product where m_no=? order by p_no desc";
 		try {
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, "m_no");
+			preparedStatement.setInt(1, m_no);
 			resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 
@@ -188,6 +191,46 @@ public class ProductDao {
 			// TODO: handle exception
 		}
 		return 0;
+
+	}
+
+	// 날짜별 갯수 반환
+	public ArrayList<ProductDate> productdatelist() {
+
+		ArrayList<ProductDate> productDates = new ArrayList<>();
+		String sql = "select substring_index(p_date, ' ', 1) , count(*) from product group by substring_index(p_date, ' ', 1)";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				ProductDate date = new ProductDate(resultSet.getString(1), resultSet.getInt(2));
+				productDates.add(date);
+			}
+			return productDates;
+		} catch (Exception e) {
+		}
+		return productDates;
+	}
+
+	// 카테고리 별 제품수 반환
+
+	public HashMap<String, Integer> product_category_list() {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+
+		String sql = "select p_category, count(*) from product group by p_category";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				hashMap.put(resultSet.getString(1), resultSet.getInt(2));
+
+			}
+			return hashMap;
+		} catch (Exception e) {
+		}
+		return hashMap;
 
 	}
 

@@ -2,9 +2,9 @@ package domain;
 
 public class ProductDate {
 
-	private String date;
-	private int count;
-	
+	private String date; // x축
+	private int count; // y축
+
 	public ProductDate() {
 	}
 
@@ -28,9 +28,5 @@ public class ProductDate {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	
-	
-	
-	
 
 }

@@ -162,9 +162,8 @@ public class BoardDao {
 	
 	// 로그인 된 회원의 게시물 출력
 	public ObservableList<Board> myboardlist(String id) {
-		
-		String sql = "SELECT * from board where b_write=? order by b_no desc"; // 1. 조건없이 모두 출력
 		ObservableList<Board> boards = FXCollections.observableArrayList();
+		String sql = "select * from board where b_write=? order by b_no desc"; // 1. 조건없이 모두 출력
 		try {
 			psmt = connection.prepareStatement(sql);
 			psmt.setString(1, id);
