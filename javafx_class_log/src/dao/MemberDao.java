@@ -235,11 +235,7 @@ public class MemberDao {
 			// 5. SQL결과
 			if (resultSet.next()) {
 				// 패스워드를 제외한 회원 정보 출력
-				Member member = new Member(
-						resultSet.getString(2), 
-						"", 
-						resultSet.getString(4), 
-						resultSet.getString(5),
+				Member member = new Member(resultSet.getString(2), "", resultSet.getString(4), resultSet.getString(5),
 						resultSet.getInt(6));
 				return member;
 
@@ -328,6 +324,27 @@ public class MemberDao {
 		} catch (Exception e) {
 		}
 		return "";
+
+	}
+
+	// 회원 수 반환 메소드
+
+	public int member_count() {
+
+		String sql = "select count(*) from member ";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			// resultSet 처음값이 null 값이 들어가있다.
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return 0;
 
 	}
 
