@@ -11,7 +11,7 @@ public class App extends Application {
 	@Override
 	public void start(Stage root) throws Exception {
 
-		Parent parent = FXMLLoader.load(getClass().getResource("/fxml/graph.fxml"));
+		Parent parent = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
 
 //		AnchorPane mainborderpane = new AnchorPane();
 //

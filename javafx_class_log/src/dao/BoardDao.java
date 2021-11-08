@@ -189,7 +189,23 @@ public class BoardDao {
 	
 	
 	
-	
+	public int board_count() {
+
+		String sql = "select count(*) from board ";
+
+		try {
+			psmt = connection.prepareStatement(sql);
+			resultSet = psmt.executeQuery();
+			// resultSet 처음값이 null 값이 들어가있다.
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return 0;
+	}
 	
 	
 	

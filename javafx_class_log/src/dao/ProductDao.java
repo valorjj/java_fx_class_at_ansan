@@ -172,4 +172,23 @@ public class ProductDao {
 		return false;
 	}
 
+	public int product_count() {
+
+		String sql = "select count(*) from product ";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			// resultSet 처음값이 null 값이 들어가있다.
+			if (resultSet.next()) {
+				return resultSet.getInt(1);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return 0;
+
+	}
+
 }
