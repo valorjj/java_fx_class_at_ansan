@@ -10,6 +10,7 @@ import dao.MemberDao;
 import dao.ProductDao;
 import domain.Product;
 import domain.ProductDate;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +21,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
 
 public class graphController implements Initializable {
 
@@ -153,6 +155,15 @@ public class graphController implements Initializable {
 		bc.getData().add(series2);
 		lbl_category.setText(max_category);
 
+		// 원형 차트
+
+		ObservableList<PieChart.Data> observableList = FXCollections.observableArrayList();
+		observableList.add(new PieChart.Data("13", 10));
+		observableList.add(new PieChart.Data("12", 15));
+		observableList.add(new PieChart.Data("11", 9));
+
+		pc.setData(observableList);
+
 	}
 
 	@FXML
@@ -173,5 +184,7 @@ public class graphController implements Initializable {
 	private BarChart bc;
 	@FXML
 	private Label lbl_category;
+	@FXML
+	private PieChart pc;
 
 }
