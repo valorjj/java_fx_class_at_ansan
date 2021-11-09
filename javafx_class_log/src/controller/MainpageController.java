@@ -101,7 +101,7 @@ public class MainpageController implements Initializable {
 
 	@FXML
 	void home(ActionEvent event) {
-		loadpage("main_home");
+		loadpage("graph");
 
 	}
 

@@ -155,12 +155,32 @@ public class graphController implements Initializable {
 		bc.getData().add(series2);
 		lbl_category.setText(max_category);
 
+		// ------------------------------------------------------------------------
 		// 원형 차트
-
+		// ------------------------------------------------------------------------
+		// ObservableList<Product> products = ProductDao.getProductDao().productlist();
+		HashMap<String, Integer> hashMap2 = ProductDao.getProductDao().product_activation_list();
+		// 제품 상태별로
 		ObservableList<PieChart.Data> observableList = FXCollections.observableArrayList();
-		observableList.add(new PieChart.Data("13", 10));
-		observableList.add(new PieChart.Data("12", 15));
-		observableList.add(new PieChart.Data("11", 9));
+
+		for (String key : hashMap2.keySet()) {
+
+			observableList.add(new PieChart.Data(key, hashMap.get(key)));
+
+		}
+
+//		for (Product product : products) {
+//			// Group 으로 묶지 않았기 때문에 지금은 모든 데이터가 다 나온다.
+//			// Group BY 로 묶거나, Map 을 사용해서 데이터를 핕러로 한번 걸러서 저장하면 될 것 같다.
+//			// key : value 로 묶으면 위에서 했던거랑 동일하다.
+//			// ProductDao 에서 메소드를 새로 만들어야겠다.
+//			//
+//
+//			observableList.add(new PieChart.Data(product.getActivation(), 1));
+//		}
+//		observableList.add(new PieChart.Data("13", 10));
+//		observableList.add(new PieChart.Data("12", 15));
+//		observableList.add(new PieChart.Data("11", 9));
 
 		pc.setData(observableList);
 

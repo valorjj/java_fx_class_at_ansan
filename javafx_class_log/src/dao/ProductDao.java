@@ -234,4 +234,23 @@ public class ProductDao {
 
 	}
 
+	public HashMap<String, Integer> product_activation_list() {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+
+		String sql = "select p_activation, count(*) from product group by p_activation";
+
+		try {
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				hashMap.put(resultSet.getString(1), resultSet.getInt(2));
+
+			}
+			return hashMap;
+		} catch (Exception e) {
+		}
+		return hashMap;
+
+	}
+
 }
