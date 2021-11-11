@@ -34,8 +34,8 @@ public class Day29_server {
 
 				// 데이터 수신하기 [받기] 스트림을 이용한 외부 네트워크와 통신
 				InputStream inputStream = socket.getInputStream();
-				int size = inputStream.available();
-				byte[] bytes = new byte[size];
+				// int size = inputStream.available();
+				byte[] bytes = new byte[1000];
 				inputStream.read(bytes);
 				System.out.println("클라이언트의 메시지 : " + new String(bytes));
 

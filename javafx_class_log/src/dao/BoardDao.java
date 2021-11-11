@@ -103,7 +103,7 @@ public class BoardDao {
 
 	// 게시물 수정 메소드
 	public boolean update(int b_no, String b_title, String b_contents) {
-		String sql = "UPDATE boadr SET b_title=?, b_contents=? WHERE b_no=?";
+		String sql = "UPDATE board SET b_title=?, b_contents=? WHERE b_no=?";
 		try {
 			psmt = connection.prepareStatement(sql);
 

@@ -90,7 +90,7 @@ public class MainpageController implements Initializable {
 
 	@FXML
 	void chat(ActionEvent event) {
-		loadpage("chat");
+		loadpage("chatting");
 	}
 
 	@FXML

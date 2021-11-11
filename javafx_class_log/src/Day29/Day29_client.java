@@ -30,8 +30,8 @@ public class Day29_client {
 				System.out.println("서버에게 메시지 전송 성공");
 
 				InputStream inputStream = socket.getInputStream();
-				int size = inputStream.available();
-				byte[] bytes = new byte[size];
+				// int size = inputStream.available();
+				byte[] bytes = new byte[1000];
 				inputStream.read(bytes);
 				System.out.println("서버의 메시지 " + new String(bytes));
 			}

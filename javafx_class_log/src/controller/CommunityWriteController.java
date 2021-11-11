@@ -42,6 +42,7 @@ public class CommunityWriteController implements Initializable {
 
 	@FXML
 	void write(ActionEvent event) {
+		
 		Board board = new Board(txttitle.getText(), txtcontent.getText(),
 				MainpageController.getinstance().getloginId());
 
